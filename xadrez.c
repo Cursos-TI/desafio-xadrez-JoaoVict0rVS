@@ -1,46 +1,67 @@
 #include <stdio.h>
 
-int main (){
-
-    // Variaveis torre e bispo
-    int t = 1, b = 1;
-    
-    // Mover torre
-    while (t <= 5) {
+// Void da torre
+void torre(int t){
+    if (t > 0) {
         printf("Torre para direita\n");
-        t++;
+
+        torre(t - 1);
+    }
+}
+
+// Void do bispo
+void bispo(int b){
+
+        while (b > 0){
+
+            while (b > 2) {
+                printf("Bispo para cima e para direita ");
+                b--;
+            }
+            printf("\n");
+            printf("Bispo para cima e para direita");
+            b--;
+        }
+        printf("\n");
     }
 
-printf("\n");
-    
-        // Mover bispo
-        do {
-            printf("Bispo para cima\n");
-            printf("Bispo para direita\n");
-            b++;
-        } while (b <= 5);
+// Void da rainha
+void rainha(int r){
+    if (r > 0) {
+        printf("Rainha para esquerda\n");
 
-printf("\n");
-    
-    // Mover Rainha
-   for (int r = 1; r <= 8; r++) {
-    printf("Rainha para esquerda\n");
-   }
-   
-printf("\n");
+        rainha(r - 1);
+    }
+}
 
-        // Mover cavalo
-        int c2 = 1;
 
-        for (int c = 1; c <= 1; c++) {
-            while (c2 <= 2){
-                printf("Cavalo para cima\n");
-                c2++;
+
+
+        int main(){
+            int v1 = 5, v2 = 8;
+            // Chamar torre
+            torre(v1);
+        printf("\n");
+
+            // Chamar bispo
+            bispo(v1);
+        printf("\n");
+
+            // Chamar rainha
+            rainha(v2);
+        printf("\n");
+
+            // Mover cavalo
+            for (int c = 1, c2 = 1; c <= 1 && c > 0; c++) {
+                while (c2 <= 2){
+                    printf("Cavalo para cima\n");
+                    c2++;
+                }
+                    printf("Cavalo para direita\n");
             }
-                printf("Cavalo para direita\n");
-        }
 
 
-    return 0;
+            return 0;
+
 
 }
