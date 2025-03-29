@@ -26,7 +26,21 @@ printf("\n");
    for (int r = 1; r <= 8; r++) {
     printf("Rainha para esquerda\n");
    }
+   
+printf("\n");
 
-   return 0;
+        // Mover cavalo
+        int c2 = 1;
+
+        for (int c = 1; c <= 1; c++) {
+            while (c2 <= 2){
+                printf("Cavalo para cima\n");
+                c2++;
+            }
+                printf("Cavalo para direita\n");
+        }
+
+
+    return 0;
 
 }
